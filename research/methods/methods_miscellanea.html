@@ -6,6 +6,7 @@
     <title>MaLGa - Machine Learning Genoa Center</title>
     <link href="/dist/output.css" rel="stylesheet">
     <link href="/src/styles.css" rel="stylesheet">
+
 </head>
 <body>
     <header class="fixed top-0 w-full px-8 py-4 bg-white flex justify-between items-center shadow-md z-50">
@@ -24,9 +25,9 @@
 
         <nav class="hidden lg:flex space-x-8">
             <!-- <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">News & Events</a> -->
-            <a href="research.html" class="text-malga-red">Research</a>
-            <!-- <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Publications</a> -->
-            <!-- <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Seminars</a>
+            <a href="/research/research.html" class="text-malga-red">Research</a>
+            <!-- <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Publications</a>
+            <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Seminars</a>
             <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Education</a>
             <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">People</a>
             <a href="/not_found.html" class="text-gray-600 hover:text-malga-red transition-colors">Open positions</a> -->
@@ -82,7 +83,7 @@
         <div class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 lg:hidden" id="mobile-menu">
             <nav class="flex flex-col items-center justify-center h-full space-y-8">
                 <!-- <a href="/not_found.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">News & Events</a> -->
-                <a href="research.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">Research</a>
+                <a href="/research/research.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">Research</a>
                 <!-- <a href="/not_found.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">Publications</a>
                 <a href="/not_found.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">Seminars</a>
                 <a href="/not_found.html" class="text-xl text-gray-600 hover:text-malga-red transition-colors">Education</a>
@@ -92,144 +93,38 @@
         </div>
     </header>
 
-    <!-- Breadcrums -->
+    <!-- Breadcrumb -->
     <div class="breadcrumb-padding w-full text-left bg-white z-50 shadow">
         <nav aria-label="breadcrumb" class="block w-full">
             <ol class="flex min-w-max flex-wrap items-center rounded-md bg-gray-100 py-2 px-4">
-                <li class="flex cursor-pointer items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300 hover:text-malga-red">
-              <a class="opacity-60" href="/index.html">
-                <span>Home</span>
-              </a>
-              <span class="pointer-events-none p-2 mx-2 select-none font-sans text-sm font-normal leading-normal text-blue-gray-500 antialiased">
-                /
-              </span>
-            </li>
-            <li class="flex items-center font-sans text-sm font-normal leading-normal text-blue-gray-900 antialiased">
-                <span>Research</span>
-            </li>
-          </ol>
+                <li class="flex cursor-pointer items-center font-sans text-sm font-normal text-blue-gray-900 hover:text-malga-red">
+                    <a class="opacity-60" href="/index.html">
+                        <span>Home</span>
+                    </a>
+                    <span class="mx-2 p-2 text-blue-gray-500"> / </span>
+                </li>
+                <li class="flex cursor-pointer items-center font-sans text-sm font-normal text-blue-gray-900 hover:text-malga-red">
+                    <a class="opacity-60" href="/research/research.html">
+                        <span>Research</span>
+                    </a>
+                    <span class="mx-2 p-2 text-blue-gray-500"> / </span>
+                </li>
+                <li class="flex items-center font-sans text-sm font-normal text-blue-gray-900">
+                    <span>MLV</span>
+                </li>
+            </ol>
         </nav>
     </div>
+    
 
     <main class="research-content">
 
-        <h1 class="text-4xl font-bold text-center my-8">Machine Learning & Vision Research Areas</h1>
-        
+        <h1 class="text-4xl font-bold text-center my-8">Research Projects</h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-
-            <!-- Card 1 -->            
-            <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-md mx-auto">
-                <a href="#">
-
-                    <div
-                        class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                        <img class="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/dmzkvsfdw/image/upload/h_600,ar_3:2,c_fill,q_auto,f_jpg/media_production/needle_vu8wep"
-                            alt="card-image" />
-                    </div>
-                    <div class="p-6">
-                        <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-malga-red text-center">
-                            Scene Analysis
-                        </h5>
-                        <p class="block font-sans text-base antialiased leading-relaxed text-inherit">
-                            Placeholder text
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-md mx-auto">
-                <a href="#">
-                    <div
-                        class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                        <img class="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/dmzkvsfdw/image/upload/h_600,ar_3:2,c_fill,q_auto,f_jpg/media_production/IMG_3384_b8m8cy"
-                            alt="card-image" />
-                    </div>
-                    <div class="p-6">
-                        <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-malga-red text-center">
-                            Methods and Miscellanea
-                        </h5>
-                        <p class="block font-sans text-base antialiased leading-relaxed text-inherit">
-                            Placeholder text
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-md mx-auto">
-                <a href="/research/mlv/mlv.html">
-                    <div class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                        <img class="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/dmzkvsfdw/image/upload/h_600,ar_3:2,c_fill,q_auto,f_jpg/media_production/vision_eye_kd0r20"
-                            alt="card-image" />
-                    </div>
-                    <div class="p-6">
-                        <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-malga-red text-center">
-                            Human pose, Motion & action
-                        </h5>
-                        <p class="block font-sans text-base antialiased leading-relaxed text-inherit">
-                            Placeholder text
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Card 4 -->   
-            <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-md mx-auto">
-                <a href="/research/biomedical/biomedical.html">
-                    <div class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                        <img class="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/dmzkvsfdw/image/upload/h_600,ar_3:2,c_fill,q_auto,f_jpg/media_production/LCSL-old_ufgjkq"
-                            alt="card-image" />
-                    </div>
-                    <div class="p-6">
-                        <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-malga-red text-center">
-                            Biomedical data
-                        </h5>
-                        <p class="block font-sans text-base antialiased leading-relaxed text-inherit">
-                            Placeholder text
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Card 5 -->
-            <!-- <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full max-w-md mx-auto">
-                <a href="#">
-                    <div class="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                        <img class="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/dmzkvsfdw/image/upload/h_600,ar_3:2,c_fill,q_auto,f_jpg/media_production/PiMLB_vaduhx_kqb41a"
-                            alt="card-image" />
-                    </div>
-                    <div class="p-6">
-                        <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-malga-red">
-                            Physics Informed Machine Learning for Biological Behavior
-                        </h5>
-                        <p class="block font-sans text-base antialiased leading-relaxed text-inherit">
-                            Placeholder text
-                        </p>
-                    </div>
-                </a>
-            </div> -->
-
-        </div>
-
-
-        
+       
     </main>
 
-    <div class="fixed bottom-0 right-0 p-4 hidden" id="back-to-top">
-        <button class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center" onclick="backToTop()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-        </button>
-    </div>
-    
+        
     <script>
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -244,30 +139,8 @@
             });
         });
     </script>
-
-    <script>
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-    </script>
-  
-
-    <script>
-        function backToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }   
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
+
 
 </body>
 
