@@ -402,3 +402,80 @@ body {
 .topic-tag:hover {
     background-color: #b6e3ff;
 }
+
+/* #main { width:600px; margin:50px auto; } */
+#atom {
+    width: 600px;
+    height: 600px;
+    /*border:1px solid red;*/
+    -webkit-perspective: 1000;
+    position: relative;
+}
+
+/* #nucleus { position:absolute; top:50%; left:50%; margin: -50px 0 0 -50px; width:250px; height:150px;} */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(200px, 90vw, 600px);
+    height: clamp(200px, 90vw, 600px);
+    border-radius: 50%;
+    border: 2px solid #cccccc2c;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateX(80deg) rotateY(20deg);
+}
+
+#atom .orbit:nth-child(2) {
+    transform: translate(-50%, -50%) rotateX(80deg) rotateY(70deg);
+}
+
+#atom .orbit:nth-child(3) {
+    transform: translate(-50%, -50%) rotateX(100deg) rotateY(-15deg);
+}
+
+#atom .orbit:nth-child(4) {
+    transform: translate(-50%, -50%) rotateX(80deg) rotateY(-50deg);
+}
+
+.path {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: pathRotate 5s linear infinite;
+}
+
+.electron {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eb7e7e;
+    animation: electronFix 5s linear infinite;
+}
+
+#atom .orbit:nth-child(2) .path, #atom .orbit:nth-child(2) .electron {-webkit-animation-delay: -1.0s}
+#atom .orbit:nth-child(3) .path, #atom .orbit:nth-child(3) .electron {-webkit-animation-delay: -1.5s}
+#atom .orbit:nth-child(4) .path, #atom .orbit:nth-child(4) .electron {-webkit-animation-delay: -0.5s}
+
+/* Animation Keyframes */
+@keyframes pathRotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes electronFix {
+    from {
+        transform: rotateX(90deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(90deg) rotateY(-360deg);
+    }
+}

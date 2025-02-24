@@ -74,9 +74,36 @@
 
     <main>
         <!-- Full-Screen Animation Div -->
-        <div id="particles-js" class="h-screen flex items-center justify-center relative">
-            <div class="absolute">
-                <img src="images/malga_logo_nav.png" alt="Description of the image" class="w-25 h-20 mb-10">
+        <div id="main" class="h-screen flex items-center justify-center bg-gray-700">
+            <div id="atom">
+                <div class="orbit">
+                    <div class="path">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <div class="orbit">
+                    <div class="path">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <div class="orbit">
+                    <div class="path">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <div class="orbit">
+                    <div class="path">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <div id="nucleus" class="absolute inset-0 flex items-center justify-center">
+                    <img src="images/AdobeStock_468059956.png" alt="eye image" class="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl ">
+                </div>
+            </div>
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <h1 class="text-center text-white text-2xl font-bold">MLV</h1>
+                <h1 class="text-center text-white text-4xl font-bold">Machine Learning & Vision</h1>
             </div>
         </div>
     
@@ -118,8 +145,8 @@
             });
         });
     </script>
-    <script src="node_modules/particles.js/particles.js"></script>
-    <script src="app.js"></script>
+    <!-- <script src="node_modules/particles.js/particles.js"></script> -->
+    <!-- <script src="app.js"></script> -->
 
     <div class="fixed bottom-0 right-0 p-4 hidden" id="back-to-top">
         <button class="bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center" onclick="backToTop()">
