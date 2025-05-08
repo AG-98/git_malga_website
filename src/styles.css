@@ -404,12 +404,27 @@ body {
 }
 
 /* #main { width:600px; margin:50px auto; } */
-#atom {
-    width: 600px;
-    height: 600px;
-    /*border:1px solid red;*/
-    -webkit-perspective: 1000;
+#main {
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+}
+
+#atom {
+    width: 75vw;
+    height: 75vw;
+    max-width: 900px;
+    max-height: 900px;
+    min-width: 220px;
+    min-height: 220px;
+    -webkit-perspective: 1000;
+    perspective: 1000px;
+    position: relative;
+    margin: 0 auto;
 }
 
 /* #nucleus { position:absolute; top:50%; left:50%; margin: -50px 0 0 -50px; width:250px; height:150px;} */
@@ -417,8 +432,12 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: clamp(200px, 90vw, 600px);
-    height: clamp(200px, 90vw, 600px);
+    width: 80%;
+    height: 80%;
+    max-width: 95vw;
+    max-height: 95vw;
+    min-width: 120px;
+    min-height: 120px;
     border-radius: 50%;
     border: 2px solid #cccccc2c;
     transform-style: preserve-3d;
@@ -447,14 +466,27 @@ body {
 
 .electron {
     position: absolute;
-    top: -5px;
+    top: -2.5%;
     left: 50%;
-    margin-left: -5px;
-    width: 10px;
-    height: 10px;
+    margin-left: -2.5%;
+    width: 5%;
+    height: 5%;
+    min-width: 8px;
+    min-height: 8px;
+    max-width: 18px;
+    max-height: 18px;
     border-radius: 50%;
     background: #eb7e7e;
     animation: electronFix 5s linear infinite;
+}
+
+#nucleus img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    min-width: 120px;
+    display: block;
+    margin: 0 auto;
 }
 
 #atom .orbit:nth-child(2) .path, #atom .orbit:nth-child(2) .electron {-webkit-animation-delay: -1.0s}
@@ -477,5 +509,59 @@ body {
     }
     to {
         transform: rotateX(90deg) rotateY(-360deg);
+    }
+}
+
+@media (min-width: 1200px) {
+    #main {
+        padding: 4rem;
+    }
+    
+    #atom {
+        width: 70vw;
+        height: 70vw;
+    }
+    
+    .orbit {
+        width: 85%;
+        height: 85%;
+    }
+}
+
+@media (max-width: 900px) {
+    #atom {
+        width: 80vw;
+        height: 80vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .orbit {
+        min-width: 80px;
+        min-height: 80px;
+    }
+    #nucleus img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #main {
+        padding: 1rem;
+    }
+    
+    #atom {
+        width: 95vw;
+        height: 95vw;
+        max-width: 98vw;
+        max-height: 98vw;
+        min-width: 120px;
+        min-height: 120px;
+    }
+    .orbit {
+        min-width: 50px;
+        min-height: 50px;
+    }
+    #nucleus img {
+        max-width: 300px;
     }
 }
