@@ -1,0 +1,156 @@
+/* Publications Table Styles */
+
+/* Container styling */
+.publications-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+  
+  /* Heading styling */
+  .publication-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f56565;
+    padding-bottom: 0.25rem;
+    display: inline-block;
+  }
+  
+  /* Search bar styling */
+  .search-container {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.875rem;
+    color: #a0aec0;
+  }
+  
+  /* Table styling */
+  .publications-table-container {
+    overflow-x: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+  }
+  
+  .publications-table {
+    min-width: 100%;
+    background-color: white;
+  }
+  
+  .publications-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .publications-table th.sortable {
+    cursor: pointer;
+  }
+  
+  .publications-table th.sortable:hover .sort-icon {
+    opacity: 0.5;
+  }
+  
+  .publications-table .sort-icon {
+    margin-left: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  
+  .publications-table .sort-icon.active {
+    opacity: 1;
+  }
+  
+  .publications-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .publications-table tr:hover {
+    background-color: #f7fafc;
+  }
+  
+  /* Links styling */
+  .publication-title-link {
+    color: #f56565;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .publication-title-link:hover {
+    color: #e53e3e;
+  }
+  
+  .paper-link {
+    display: inline-block;
+    color: #3182ce;
+    transition: color 0.15s ease;
+  }
+  
+  .paper-link:hover {
+    color: #2c5282;
+  }
+  
+  /* No results message */
+  .no-results {
+    padding: 2rem 0;
+    text-align: center;
+    color: #718096;
+  }
+
+
+  /* Pagination styling */
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    padding: 8px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-size-control {
+    margin-left: 20px;
+  }
+  
+  .page-size-control select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
